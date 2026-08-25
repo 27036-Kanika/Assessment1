@@ -2,6 +2,9 @@
 
 namespace Assessment1ToDo.Repositories
 {
+    /// <summary>
+    /// Defines CRUD operations for user management.
+    /// </summary>
     internal interface IUserRepository
     {
         List<User> GetAll();

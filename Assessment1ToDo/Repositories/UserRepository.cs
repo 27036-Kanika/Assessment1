@@ -3,6 +3,9 @@ using Assessment1ToDo.Models;
 
 namespace Assessment1ToDo.Repositories
 {
+    /// <summary>
+    /// CRUD operations for user management.
+    /// </summary>
     internal class UserRepository : IUserRepository
     {
         private readonly List<User> _users;

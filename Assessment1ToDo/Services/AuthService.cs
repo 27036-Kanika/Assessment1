@@ -4,6 +4,9 @@ using Assessment1ToDo.Repositories;
 
 namespace Assessment1ToDo.Services
 {
+    /// <summary>
+    /// Provides business logic for user authentication.
+    /// </summary>
     internal class AuthService : IAuthService
     {
         private readonly IUserRepository _userRepository;
@@ -25,7 +28,7 @@ namespace Assessment1ToDo.Services
             {
                 return false;
             }
-            if (_userRepository.GetById(user.Id) == null)
+            if (_userRepository.GetById(user.Id) != null)
             {
                 return false;
             }

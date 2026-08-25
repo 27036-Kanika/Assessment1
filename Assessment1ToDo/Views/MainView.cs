@@ -5,15 +5,20 @@ using Assessment1ToDo.Services;
 
 namespace Assessment1ToDo.Views
 {
+    /// <summary>
+    /// Represents the console user interface.
+    /// </summary>
     internal class MainView
     {
         private const int MaximumAttempts = 3;
         private readonly IAuthService authService;
         private readonly UserView userView;
-        public MainView(IAuthService authService, UserView userView)
+        private readonly TodoView todoView;
+        public MainView(IAuthService authService, UserView userView, TodoView todoView)
         {
             this.authService = authService;
             this.userView = userView;
+            this.todoView = todoView;
         }
 
         public void Show()

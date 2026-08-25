@@ -2,6 +2,9 @@
 
 namespace Assessment1ToDo.Services
 {
+    /// <summary>
+    /// Provides business logic for transaction management.
+    /// </summary>
     internal interface IAuthService
     {
         bool Register(User user);

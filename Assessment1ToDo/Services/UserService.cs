@@ -4,6 +4,9 @@ using Assessment1ToDo.Repositories;
 
 namespace Assessment1ToDo.Services
 {
+    /// <summary>
+    /// Provides business logic for user management.
+    /// </summary>
     internal class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;

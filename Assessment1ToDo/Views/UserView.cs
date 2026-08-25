@@ -4,18 +4,23 @@ using Assessment1ToDo.Services;
 
 namespace Assessment1ToDo.Views
 {
+    /// <summary>
+    /// Represents the console user interface.
+    /// </summary>
     internal class UserView
     {
         private const int MaximumAttempts = 3;
         private readonly IAuthService authService;
         private readonly IUserService userService;
-
+        private readonly TodoView todoView;
         public UserView(
             IAuthService authService,
-            IUserService userService)
+            IUserService userService,
+            TodoView todoView)
         {
             this.authService = authService;
             this.userService = userService;
+            this.todoView = todoView;
         }
 
         public void Show()
@@ -41,6 +46,10 @@ namespace Assessment1ToDo.Views
                     {
                         case UserMenuChoice.UpdateProfile:
                             UpdateProfile();
+                            break;
+
+                        case UserMenuChoice.ViewToDos:
+                            todoView.Show();
                             break;
 
                         case UserMenuChoice.Logout:
