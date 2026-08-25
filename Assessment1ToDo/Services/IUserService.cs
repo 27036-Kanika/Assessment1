@@ -1,0 +1,11 @@
+﻿using Assessment1ToDo.Models;
+
+namespace Assessment1ToDo.Services
+{
+    internal interface IUserService
+    {
+        User? GetUser(string id);
+        bool UpdateUser(User user);
+        bool DeleteUser(string id);
+    }
+}
