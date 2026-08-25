@@ -16,7 +16,7 @@
         Login,
 
         /// <summary>
-        /// 
+        /// Exit
         /// </summary>
         Exit,
     }
