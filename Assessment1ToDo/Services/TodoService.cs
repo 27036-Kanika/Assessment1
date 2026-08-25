@@ -21,7 +21,7 @@ namespace Assessment1ToDo.Services
                 return false;
             }
 
-            if (todo.TargetDate > DateTime.Today)
+            if (todo.TargetDate < DateTime.Today)
             {
                 return false;
             }
